@@ -1,0 +1,44 @@
+Started by user Admin
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\addressbook tests
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\addressbook tests\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/nkoshkina/Python_Training2 # timeout=10
+Fetching upstream changes from https://github.com/nkoshkina/Python_Training2
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.34.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/nkoshkina/Python_Training2 +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/main
+Seen 1 remote branch
+ > git.exe show-ref --tags -d # timeout=10
+Checking out Revision 38acf4d15edcad1f0031cb4d9efdaeb7ab08b092 (origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 38acf4d15edcad1f0031cb4d9efdaeb7ab08b092 # timeout=10
+Commit message: "added requirements.txt file"
+First time build. Skipping changelog.
+[addressbook tests] $ cmd.exe /C "C:\Python310\python.exe C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenvs\d41d8cd9 && exit %%ERRORLEVEL%%"
+C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py:25: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  import distutils.spawn
+C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py:26: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+  import distutils.sysconfig
+C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py:1041: DeprecationWarning: the imp module is deprecated in favour of importlib and slated for removal in Python 3.12; see the module's documentation for alternative uses
+  import imp
+PYTHONHOME is set.  You *must* activate the virtualenv before using it
+Using base prefix 'C:\\Python310'
+New python executable in C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenvs\d41d8cd9\Scripts\python.exe
+Traceback (most recent call last):
+  File "C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py", line 2343, in <module>
+    main()
+  File "C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py", line 703, in main
+    create_environment(home_dir,
+  File "C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py", line 925, in create_environment
+    py_executable = os.path.abspath(install_python(
+  File "C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py", line 1438, in install_python
+    fix_local_scheme(home_dir, symlink)
+  File "C:\ProgramData\Jenkins\.jenkins\shiningpanda\jobs\62ae2d4d\virtualenv.py", line 1521, in fix_local_scheme
+    if sysconfig._get_default_scheme() == 'posix_local':
+AttributeError: module 'sysconfig' has no attribute '_get_default_scheme'. Did you mean: 'get_default_scheme'?
+Build step 'Virtualenv Builder' marked build as failure
+Finished: FAILURE
